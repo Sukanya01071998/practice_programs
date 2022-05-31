@@ -3586,11 +3586,30 @@ n=5
 # l1=[]
 # for i in range(len(l)):
 #       print(l1)
-s={1,2,3,4,5,6,7,8,9,10}
-t=10
-for i in s:
-    if t-i in s:
-        print(t-i,i)
-    # for j in s:
-    #     if i+j==10:
-    #         print(i,j)
+# s={1,2,3,4,5,6,7,8,9,10}
+# t=10
+# for i in s:
+#     if t-i in s:
+#         print(t-i,i)
+# for j in s:
+# if i+j==10:
+#print(i,j)
+# def fib(n):
+#     a,b=0,1
+#     while a<n:
+#         yield a
+#         a,b=b,a+b
+# x=fib(100)
+# for i in x:
+#     print(i)
+l=[1,2,'a',3,'b']
+l1=[]
+s=0
+for i in l:
+    if str(i).isdigit():
+       s+=int(i)
+
+    else:
+        l1.append(i)
+l1.insert(0,s)
+print(l1)
