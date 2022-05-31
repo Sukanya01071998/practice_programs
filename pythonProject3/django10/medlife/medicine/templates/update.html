@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{eid}}/">
+    <center>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+
+    <button type="submit">Update</button>
+    </center>
+</form>
+</body>

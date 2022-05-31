@@ -1,0 +1,19 @@
+</head>
+<body>
+<form method="POST" class="post-form" action="/creata/">
+    <center>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table}}
+    </table>
+
+    <button type="submit">Creata</button>
+    </center>
+</form>
+
+<br/><br/>
+{% for key,value in request.session.items %}
+{{key}}-{{value}}<br/>
+{% endfor %}
+</body>
+</html>

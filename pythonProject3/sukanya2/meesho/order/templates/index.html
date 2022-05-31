@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Customer table</title>
+</head>
+<body>
+<center>
+<table border="3px">
+    <thead>
+    <th>name</th>
+    <th> branch</th>
+    <th>address</th>
+    <th>contact</th>
+
+    </thead>
+{% for i in DRDO_data %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.branch}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.contact}}</td>
+
+
+        <td>
+             <a href="/edit/{{i.name}}">edit</a> &nbsp&nbsp<a href="/delete/{{i.name}}"> Delete </a>
+        </td>
+
+    </tr>
+{% endfor %}
+</table>
+      <td><a href="/create/"> Create </a></td><br>
+      <td><a href="/accounts/logout/"> Logout </a></td>
+    <p> today is good</p>
+
+
+<br/><br/>
+{% for key,value in request.session.items %}
+{{key}}-{{value}}<br/>
+{% endfor %}
+</center>
+</body>
+</html>
